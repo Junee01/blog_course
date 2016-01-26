@@ -1,25 +1,32 @@
 <div class="wrapper wrapper_padding clearfix">
 	<div class="col-1 about homepage_content">
-		<h2>About</h2>
+		<h2>소개</h2>
 		<hr>
-		<p>1</p>
-		<p>2</p>
-		<p>3</p>
-		<p>4<br><a href="%">abc</a></p>
+		<p>이름 : 박상준</p>
+		<p>언어</p>
+		<ul>
+			<li>Ruby</li>
+			<li>C, C#</li>
+			<li>Java</li>
+			<li>Python</li>
+		</ul>
+		<p>직업 : 개발자</p>
+		<hr>
+		<p>이 웹 페이지는 Junee01(Sangjun Park)의 포트폴리오 및 블로그 페이지입니다.<br>
+			지금까지 대학생활 및 대외활동을 하면서, 만든 작품 및 개발 지식 공유에 기여한 내용들을 모았습니다.<br>
+			프로젝트와 블로그 포스팅은 주제와 년도별로 정리되어 있습니다.</p>
 	</div>
 	<div class="col-2 homepage_content">
-		<h2>Stuff I've Written</h2>
+		<h2>'Junee01' 블로그 포스팅</h2>
 		<hr>
-
 		<% @posts.each do |post| %>
 			<h3><a href="#"><%= link_to post.title, post %></a></h3>
 			<p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
 		<% end %>
 	</div>
 	<div class="col-3 homepage_content">
-		<h2>Stuff I've Built</h2>
+		<h2>프로젝트</h2>
 		<hr>
-
 		<% @projects.each do |project| %>
 			<h3><a href="#"><%= link_to project.title, project %></a></h3>
 			<p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>

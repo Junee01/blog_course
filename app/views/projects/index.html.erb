@@ -1,4 +1,4 @@
-<h1 id="page_title">Stuff I'm Built</h1>
+<h1 id="page_title">프로젝트 목록</h1>
 
 <div id="posts_wrapper" class="skinny_wrapper">
 	<% @projects.each do |project| %>
@@ -6,6 +6,12 @@
 			<p class="date"><%= project.created_at.strftime('%A, %B %d') %></p>
 			<h2><a href="#"><%= link_to project.title, project %></a></h2>
 			<hr>
+		</div>
+	<% end %>
+
+	<% if user_signed_in? %>
+		<div id="admin_links">
+			<%= link_to "글 작성하기", new_project_path %>
 		</div>
 	<% end %>
 </div>
